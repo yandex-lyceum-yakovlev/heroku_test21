@@ -3,9 +3,12 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return "Hello, World!"
 
 @app.route('/list_prof/<lst>')
-def index(lst):
+def prof(lst):
     professions = ['инженер-исследователь', 'пилот', 'строитель', 'экзобиолог', 'врач',
                    'инженер по терраформированию', 'климатолог',
                    'специалист по радиационной защите', 'астрогеолог', 'гл¤циолог',
